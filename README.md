@@ -73,5 +73,3 @@ complete the initial configuration of a new lesson repository built from this te
 
 [workbench]: https://carpentries.github.io/sandpaper-docs/
 
-
-updated
