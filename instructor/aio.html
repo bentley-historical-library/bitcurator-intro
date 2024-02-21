@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: All in One View</title>
+<title>Digital Forensics for Librarians and Archivists: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -65,7 +65,7 @@
       <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Digital Forensics for Librarians and Archivists
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -76,7 +76,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Digital Forensics for Librarians and Archivists
           </span>
         </li>
         <li class="nav-item">
@@ -109,7 +109,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Lesson Title
+  Digital Forensics for Librarians and Archivists
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -191,6 +191,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="01-getting-started-bit-curator.html">2. Getting Started with BitCurator</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -248,7 +260,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Using RMarkdown</a></p>
 <hr>
-<p>Last updated on 2023-12-05 |
+<p>Last updated on 2024-02-21 |
         
         <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -449,6 +461,163 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
+</section></section><section id="aio-01-getting-started-bit-curator"><p>Content from <a href="01-getting-started-bit-curator.html">Getting Started with BitCurator</a></p>
+<hr>
+<p>Last updated on 2024-02-21 |
+        
+        <a href="https://github.com/carpentries/workbench-template-rmd/edit/main/episodes/01-getting-started-bit-curator.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 8 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I install and use digital forensics tools that may be useful
+for digital curation activities?</li>
+<li>What is a disk image and how can I create one?</li>
+<li>What tools may be used to acquire born-digital materials from
+removable storage media (and other locations), which ensure the
+integrity of the data, create useful information about the source and
+the resulting materials, and can help to preserve the context of the
+original materials?</li>
+<li>What sorts of digital media are most well suited to this sort of
+activity? Are there some that are not?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Test and evaluate tools for use in the identification, transfer, and
+preservation of born-digital materials.</li>
+<li>Install and become familiar with the tools in the BitCurator
+environment.</li>
+<li>Identify appropriate tools for acquiring born-digital content from
+removable media and scan for potentially sensitive information stored in
+that media.</li>
+<li>Use the Guymager disk imaging software to acquire the contents of a
+storage device and its associated metadata.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="instructions"><h2 class="section-heading">Instructions<a class="anchor" aria-label="anchor" href="#instructions"></a>
+</h2>
+<hr class="half-width">
+<p>For this lab, the main goal is to get started with BitCurator. To do
+this, you will need to install BitCurator on your local computer, and
+you will also need to have a small removable storage device, such as a
+USB drive or thumb drive. (Your removable storage media should be modest
+in capacity in order to reduce file sizes.)</p>
+<p>The overall steps in this task are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Install BitCurator locally (on your laptop, or a desktop that you
+use and have access to). This will require installing VirtualBox, which
+is a software from Oracle, an “image” of BitCurator to use for importing
+the image to VirtualBox, and then starting up the BitCurator environment
+on your computer.</li>
+<li>Launch BitCurator in the VirtualBox environment, and spend some time
+getting familiar with the tool’s in the BitCurator environment.</li>
+<li>Acquire a disk image of some sample of digital materials (from a USB
+or small storage device) using GuyMager, a disk imaging tool that is
+part of the BitCurator environment.</li>
+</ol>
+<p>For reference, these are the tools you will be focused on:</p>
+<ul>
+<li>
+<a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases" class="external-link">BitCurator</a>
+- as of January 2023, the current version is 4.4.1</li>
+<li>
+<a href="https://guymager.sourceforge.io/" class="external-link">GuyMager</a> (note that
+this is already part of the above, so there is not need to install it
+separately)</li>
+</ul></section><section id="installation-tips"><h2 class="section-heading">Installation Tips<a class="anchor" aria-label="anchor" href="#installation-tips"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>To guide your BitCurator installation and imaging process, you
+should consult Bitcurator’s QuickStart Guide, available here: <a href="http://distro.ibiblio.org/bitcurator/docs/BitCurator-Quickstart-v4.x.x.pdf" class="external-link uri">http://distro.ibiblio.org/bitcurator/docs/BitCurator-Quickstart-v4.x.x.pdf</a>.</li>
+<li>Note that for this activity, <strong>you will be using the “Virtual
+Appliance” option, not the option to install as a direct boot or
+partition</strong>. So, you do not need to create a bootable USB drive
+prior to installation (ignore instructions about that).</li>
+<li>You can use the <code>.ova</code> file linked here for your virtual
+appliance: <a href="https://distro.ibiblio.org/bitcurator/BitCurator-4.4.1.ova" class="external-link uri">https://distro.ibiblio.org/bitcurator/BitCurator-4.4.1.ova</a>
+(<a href="https://distro.ibiblio.org/bitcurator/BitCurator-4.4.1.ova.sha256" class="external-link">SHA256
+for verification</a>)</li>
+<li>Be sure to <strong>set up a Shared Folder</strong> as outlined in
+the instructions, so that you can save files to your local computer
+(outside the VM).</li>
+<li>If you are ever asked while using BitCurator to enter an
+<strong>administrator password</strong>, use
+<strong>bcadmin</strong>.</li>
+</ul></section><section id="activities"><h2 class="section-heading">Activities<a class="anchor" aria-label="anchor" href="#activities"></a>
+</h2>
+<hr class="half-width">
+<div id="getting-around-in-bitcurator" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="getting-around-in-bitcurator" class="callout-inner">
+<h3 class="callout-title">Getting around in BitCurator<a class="anchor" aria-label="anchor" href="#getting-around-in-bitcurator"></a>
+</h3>
+<div class="callout-content">
+<p>Getting around - tasks</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Getting around: Answers will vary, depending on what you choose to
+look at. At minimum, you should look at the various “Applications” (menu
+up at the top), use the right click option to look at file information,
+checksums, and look around to find other interesting things.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>Use BitCurator as a helpful way to bundle together and run many
+tools useful to digital forensics that are appropriate to digital
+curation. That is, tools that assist in creating trustworthy digital
+copies, provenance information, contextual data, and chain of custody
+information.</li>
+<li>You can use <code>GuyMager</code> to make disk images.</li>
+<li>BitCurator has things set up so you can use <code>GuyMager</code> as
+well as other tools that will document your transfer and copying
+processes.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
 </section></section>
 </div>
     </main>
@@ -467,7 +636,7 @@ any links that you are not going to use.
 	
         | <a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/carpentries/workbench-template-rmd/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+				<p><a href="https://github.com/carpentries/workbench-template-rmd/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:jajohnst@umich.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
         
@@ -491,14 +660,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "digital forensics, archives, libraries, digital collections, lesson",
   "name": "All in One View",
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-rmd/instructor/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-rmd/instructor/aio.html",
-  "dateCreated": "2024-01-26",
-  "dateModified": "2024-02-20",
-  "datePublished": "2024-02-20"
+  "dateCreated": "2024-02-20",
+  "dateModified": "2024-02-21",
+  "datePublished": "2024-02-21"
 }
 
   </script><script>
