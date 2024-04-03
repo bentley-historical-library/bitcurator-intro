@@ -1,5 +1,7 @@
 ---
 title: 'Digital Forensics for Archives'
+teaching: 5
+exercises: 3
 ---
 
 # Header 1
