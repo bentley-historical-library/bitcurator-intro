@@ -59,8 +59,11 @@ contact: 'jajohnst@umich.edu' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
-- 01-getting-started-bit-curator.md
+- intro-prep-setup.md
+- 01-digital-forensics-for-archives.md
+- 02-getting-started-bit-curator.md
+- 03-imaging.md
+- 04-reporting.md
 
 # Information for Learners
 learners: 
