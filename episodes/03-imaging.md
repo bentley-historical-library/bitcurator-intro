@@ -1,5 +1,7 @@
 ---
 title: 'Imaging'
+teaching: 5
+exercises: 3
 ---
 
 # Imaging discs or disks?
