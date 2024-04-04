@@ -14,7 +14,7 @@ carpentry: 'incubator'
 title: 'Digital Forensics for Librarians and Archivists' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2024-02-20 
+created: 2024-02-20
 
 # Comma-separated list of keywords for the lesson
 keywords: 'digital forensics, archives, libraries, digital collections, lesson' # FIXME
@@ -27,7 +27,7 @@ life_cycle: 'pre-alpha' # FIXME
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-rmd' # FIXME
+source: 'https://github.com/bentley-historical-library/bitcurator-intro'
 
 # Default branch of your lesson
 branch: 'main'
@@ -58,7 +58,7 @@ contact: 'jajohnst@umich.edu' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - 00-intro-prep-setup.md
 - 01-digital-forensics-for-archives.md
 - 02-getting-started-bit-curator.md
@@ -66,18 +66,17 @@ episodes:
 - 04-reporting.md
 
 # Information for Learners
-learners: 
+learners:
 - reference.md
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-
 
