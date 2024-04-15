@@ -7,7 +7,7 @@ exercises: 3
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What tools are available in the BitCurator environment for analyzing disk images and data tranferred from legacy media?
-- How can librarians and archivists capture of basic system characteristics and metadata?
+- How can librarians and archivists capture basic system characteristics and metadata?
 - How can they scan for for potentially sensitive information?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
