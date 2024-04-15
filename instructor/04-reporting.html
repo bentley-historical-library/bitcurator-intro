@@ -202,6 +202,7 @@
         <ul><li><a href="#mounting-and-examining-a-disk-image">Mounting and Examining a Disk Image</a></li>
 <li><a href="#reporting">Reporting</a></li>
 <li><a href="#fiwalk">fiwalk</a></li>
+<li><a href="#additional-resources">Additional resources</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -313,12 +314,31 @@ detailing reporting functionality in the BitCurator Environment.</li>
 </div>
 </div>
 </div>
+<p><em>Note: If you haven’t yet created a disk image or otherwise have
+data to work with, you can download sample data from BitCurator’s Github
+site and work with that: <a href="https://github.com/bitcurator/bcc-dfa-sample-data" class="external-link">bcc-dfa-sample-data</a>.
+You can clone the repository or download and unzip the file.</em></p>
 <section id="mounting-and-examining-a-disk-image"><h2 class="section-heading">Mounting and Examining a Disk Image<a class="anchor" aria-label="anchor" href="#mounting-and-examining-a-disk-image"></a>
 </h2>
-<hr class="half-width"></section><section id="reporting"><h2 class="section-heading">Reporting<a class="anchor" aria-label="anchor" href="#reporting"></a>
+<hr class="half-width"><p>If starting with a disk image, you’ll first need to mount it in order
+to analyze the files on it. BitCurator contains some convenience scripts
+to automatically mount disk images.</p>
+<p>Right-click on a disk image from Files, and then click “Disk Image
+Mount” from “Scripts.” If everything works, you should see it appear as
+a mountable device in the list of the left. You can then navigate the
+files and explore them.</p>
+<p><em>Note: This mount is read-only.</em></p>
+</section><section id="reporting"><h2 class="section-heading">Reporting<a class="anchor" aria-label="anchor" href="#reporting"></a>
 </h2>
-<hr class="half-width"><div class="section level3">
+<hr class="half-width"><p>BitCurator includes a variety of tools to analyze and report on disk
+images and the filesystems they contain.</p>
+<div class="section level3">
 <h3 id="analyzing-a-disk-image-with-brunnhilde">Analyzing a Disk Image with Brunnhilde<a class="anchor" aria-label="anchor" href="#analyzing-a-disk-image-with-brunnhilde"></a></h3>
+<p>One such tool is Brunnhilde, a Seigfried-based characterization tool
+for directories (and disk images). Open up the Terminal, and use the
+command <code>brunnhilde.py --help</code> to view Brunnhilde’s usage
+information. Alternatively, you can find Brunnhile from the Applications
+menu.</p>
 </div>
 <div class="section level3">
 <h3 id="bulk_extractor-and-bulk-reviewer">bulk_extractor and Bulk Reviewer<a class="anchor" aria-label="anchor" href="#bulk_extractor-and-bulk-reviewer"></a></h3>
@@ -331,6 +351,8 @@ bulk_extractor<a class="anchor" aria-label="anchor" href="#scanning-disk-images-
 </div>
 </div>
 </section><section id="fiwalk"><h2 class="section-heading">fiwalk<a class="anchor" aria-label="anchor" href="#fiwalk"></a>
+</h2>
+<hr class="half-width"></section><section id="additional-resources"><h2 class="section-heading">Additional resources<a class="anchor" aria-label="anchor" href="#additional-resources"></a>
 </h2>
 <hr class="half-width"><!-- 
 Place links that you need to refer to multiple times across pages here. Delete
