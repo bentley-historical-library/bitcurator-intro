@@ -266,7 +266,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Disk Imaging</h1>
-        <p>Last updated on 2024-04-14 |
+        <p>Last updated on 2024-04-15 |
         
         <a href="https://github.com/bentley-historical-library/bitcurator-intro/edit/main/episodes/03-imaging.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -309,14 +309,12 @@ criteria.</li>
 </h2>
 <hr class="half-width"><p>A <strong>disk image</strong> a bit-perfect sequence of all the bits
 on a particular physical device; in other words, a complete bitstream
-<span class="math inline">\(as defined by the physical limits of a
-storage device\)</span>.</p>
-<ul><li>You may have seen .dmg, or .iso files - these are images <span class="math inline">\(like a thumb drive, CD, diskette\)</span>
-</li>
+(as defined by the physical limits of a storage device).</p>
+<ul><li>You may have seen .dmg, or .iso files - these are images (like a
+thumb drive, CD, diskette)</li>
 <li>We will work with “forensic images,” specifically the “Expert
-Witness” format <span class="math inline">\(aka .E01 or EWF\)</span>,
-which is a complete sequence of a physical drive, does not allow any
-modifications</li>
+Witness” format (aka .E01 or EWF), which is a complete sequence of a
+physical drive, does not allow any modifications</li>
 </ul></section><section id="to-image-or-not-to-image"><h2 class="section-heading">To image or not to image?<a class="anchor" aria-label="anchor" href="#to-image-or-not-to-image"></a>
 </h2>
 <hr class="half-width"><div class="section level3">
@@ -327,15 +325,14 @@ a disk!</p>
 content?</li>
 <li>Collection considerations:
 <ul><li>What is your collecting purpose?</li>
-<li>What is the role of the device<span class="math inline">\(s\)</span>?</li>
+<li>What is the role of the device(s)?</li>
 <li>What are you storage concerns?</li>
 </ul></li>
 <li>Device considerations:
-<ul><li>What devices have an OS <span class="math inline">\(that means lots
-of redundant &amp; proprietary files\)</span>?</li>
-<li>If it’s a storage device, may have deleted/unintended files <span class="math inline">\(these are captured by forensic imaging
-approaches\)</span>
-</li>
+<ul><li>What devices have an OS (that means lots of redundant &amp;
+proprietary files)?</li>
+<li>If it’s a storage device, may have deleted/unintended files (these
+are captured by forensic imaging approaches)</li>
 <li>What is on the device? Sometimes the device contents will determine
 if a disk image is required, such as executable files or other
 software.</li>
@@ -352,22 +349,13 @@ steps may differ.</p>
 <!-- insert instructions on how to use guymager and screenshots -->
 <div class="section level4">
 <h4 id="some-disk-image-formats-you-may-see">Some disk image formats you may see<a class="anchor" aria-label="anchor" href="#some-disk-image-formats-you-may-see"></a></h4>
-<ul><li>RAW and Split RAW <span class="math inline">\(RAW stored across
-multiple files\)</span>
-</li>
-<li>Advanced Forensics Format <span class="math inline">\(AFF\)</span>
-<span class="math display">\[no longer recommended\]</span>
-</li>
-<li>EnCase Evidence File <span class="math inline">\(.E01\)</span>
-</li>
-<li>ISO <span class="math inline">\(for CD-ROM\)</span>
-</li>
-<li>IMG <span class="math inline">\(floppy or sometimes
-CD-ROM\)</span>
-</li>
+<ul><li>RAW and Split RAW (RAW stored across multiple files)</li>
+<li>Advanced Forensics Format (AFF) [no longer recommended]</li>
+<li>EnCase Evidence File (.E01)</li>
+<li>ISO (for CD-ROM)</li>
+<li>IMG (floppy or sometimes CD-ROM)</li>
 </ul><div class="section level5">
-<h5 id="raw-format-dd">RAW format <span class="math inline">\(dd\)</span>
-<a class="anchor" aria-label="anchor" href="#raw-format-dd"></a></h5>
+<h5 id="raw-format-dd">RAW format (dd)<a class="anchor" aria-label="anchor" href="#raw-format-dd"></a></h5>
 <ul><li>Copies of the raw media data. Often split into smaller chunks to
 make them more manageable and so that the resulting images can fit onto
 limited file systems and media such as FAT or DVD/CDROM.</li>
@@ -379,10 +367,9 @@ media</li>
 processing</li>
 </ul></li>
 <li>Disadvantages:
-<ul><li>Can be very large <span class="math inline">\(no
-compression\)</span>. Zipped raw images cannot be operated on directly
-with regular tools <span class="math inline">\(efficiently perform
-arbitrary seeks\)</span>.</li>
+<ul><li>Can be very large (no compression). Zipped raw images cannot be
+operated on directly with regular tools (efficiently perform arbitrary
+seeks).</li>
 <li>Often too large to store on FAT formatted media</li>
 <li>No metadata other than file names, no hashes.</li>
 <li>No checksumming on files – not robust</li>
@@ -393,12 +380,9 @@ file).</li>
 </ul></li>
 </ul></div>
 <div class="section level5">
-<h5 id="expert-witness-format-encase">Expert Witness Format <span class="math inline">\(EnCase\)</span>
-<a class="anchor" aria-label="anchor" href="#expert-witness-format-encase"></a></h5>
-<ul><li>Evidence file consists <span class="math inline">\(in order\)</span>
-of: Acquisition information, Data Block, CRC <span class="math inline">\(cyclic redundancy check\)</span>, acquisition hash
-<span class="math inline">\(MD5\)</span>
-</li>
+<h5 id="expert-witness-format-encase">Expert Witness Format (EnCase)<a class="anchor" aria-label="anchor" href="#expert-witness-format-encase"></a></h5>
+<ul><li>Evidence file consists (in order) of: Acquisition information, Data
+Block, CRC (cyclic redundancy check), acquisition hash (MD5)</li>
 <li>Can be split for storage, transport</li>
 <li>CRC computed for every 32K block; balance between integrity and
 speed, also makes it very difficult to tamper with the evidence file (1
@@ -407,19 +391,19 @@ in 4 billion chance of collision)</li>
 reverse engineered in libewf</li>
 <li>Previously limited to 2GB size</li>
 <li>Largely proprietary</li>
-<li>Has been reverse engineered by Joachim Metz in libewf <span class="math inline">\(used in open source tools that read EWF\)</span> -
-(<a href="http://sourceforge.net/projects/libewf/files/" class="external-link uri">http://sourceforge.net/projects/libewf/files/</a>)</li>
+<li>Has been reverse engineered by Joachim Metz in libewf (used in open
+source tools that read EWF) - (<a href="http://sourceforge.net/projects/libewf/files/" class="external-link uri">http://sourceforge.net/projects/libewf/files/</a>)</li>
 </ul></div>
 <div class="section level5">
-<h5 id="iso--img-for-cd-rom-dvd">ISO <span class="math inline">\(.img\)</span> for CD-ROM, DVD<a class="anchor" aria-label="anchor" href="#iso--img-for-cd-rom-dvd"></a></h5>
+<h5 id="iso--img-for-cd-rom-dvd">ISO (.img) for CD-ROM, DVD<a class="anchor" aria-label="anchor" href="#iso--img-for-cd-rom-dvd"></a></h5>
 <ul><li>Similar to raw, but can’t contain
 <ul><li>multiple tracks</li>
 <li>audio or video tracks</li>
 </ul></li>
-<li>Doesn’t contain control headers or error correction fields <span class="math inline">\(raw can include these\)</span>
-</li>
-<li>Filesystem usually will be either ISO 9660 <span class="math inline">\(CD-ROM\)</span> or UDF <span class="math inline">\(DVDs\)</span>
-</li>
+<li>Doesn’t contain control headers or error correction fields (raw can
+include these)</li>
+<li>Filesystem usually will be either ISO 9660 (CD-ROM) or UDF
+(DVDs)</li>
 </ul></div>
 </div>
 </div>
@@ -427,11 +411,11 @@ reverse engineered in libewf</li>
 <h3 id="accessing-disk-images">Accessing Disk Images<a class="anchor" aria-label="anchor" href="#accessing-disk-images"></a></h3>
 <ul><li>Virtualization and emulation</li>
 <li>Mounting the original filesystem</li>
-<li>Accessing <span class="math inline">\(but not mounting\)</span> disk
-images using forensics software</li>
+<li>Accessing (but not mounting) disk images using forensics
+software</li>
 <li>For end user access:
-<ul><li>Remote, dynamic access to disk image contents <span class="math inline">\(via server, virtual environment\)</span>
-</li>
+<ul><li>Remote, dynamic access to disk image contents (via server, virtual
+environment)</li>
 <li>Cross-drive analysis</li>
 </ul></li>
 </ul></div>
@@ -525,7 +509,7 @@ any links that you are not going to use.
   "url": "https://bentley-historical-library.github.io/bitcurator-intro/instructor/03-imaging.html",
   "identifier": "https://bentley-historical-library.github.io/bitcurator-intro/instructor/03-imaging.html",
   "dateCreated": "2024-02-20",
-  "dateModified": "2024-04-14",
+  "dateModified": "2024-04-15",
   "datePublished": "2024-04-15"
 }
 
