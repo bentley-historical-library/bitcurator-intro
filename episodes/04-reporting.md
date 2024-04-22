@@ -51,17 +51,28 @@ c4l24_bicuratorintro_group0X_image0XX/              <-- parent directory (sample
 
 BitCurator includes a variety of tools to analyze and report on disk images and the filesystems they contain.
 
-### Analyzing a Disk Image with Brunnhilde
+### Map Your Image AKA How to Create DFXML (with fiwalk)
 
-One such tool is Brunnhilde, a Seigfried-based characterization tool for directories (and disk images). Open up the Terminal, and use the command `brunnhilde.py --help` to view Brunnhilde's usage information. Alternatively, you can find Brunnhile from the Applications menu.
+Your first goal is to create a DFXML "map" of the disk image. This will include: 
 
-### bulk_extractor and Bulk Reviewer
+- all filesystem data; 
+- checksums for integrity; and 
+- explain the relationships of elements of the disk image. 
 
-#### Scanning Disk Images and Directories with Bulk Reviewer
+**Tool:** fiwalk
 
-#### Scanning Disk Images, Files, and Directories with bulk_extractor
+**To run:** Use fiwalk in the terminal.
 
-## fiwalk
+**Command syntax:**
+
+```
+fiwalk -f -X <output filename> <input image file> 
+```
+
+This command tells the terminal to run `fiwalk`, run the "file" command on each file that it finds (`-f`), write the results to an XML file with the specified filename (`-X <output filename>`) and identifies the source of the analysis (the EWF image).
+
+
+## So What?
 
 include info from planning doc
 Are we explaining the “so what?” and what you may use reports for, how useful are they, etc?
