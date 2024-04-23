@@ -47,6 +47,10 @@ c4l24_bicuratorintro_group0X_image0XX/              <-- parent directory (sample
 └── c4l24_bicuratorintro_group0X_image0XX.info      <-- disk image metadata (from Guymager)	
 ```
 
+First Things First
+
+A simply way to get usage instructions for any of the following tools is to simply type their names in the terminal and press enter. E.g., `fiwalk`, which is the same as as using `fiwalk -h` or `fiwalk --help`.
+
 ## Reporting
 
 BitCurator includes a variety of tools to analyze and report on disk images and the filesystems they contain.
