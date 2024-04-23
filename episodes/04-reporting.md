@@ -154,3 +154,4 @@ What is the utility in creating all these reports? Reports create technical and 
   - [Scanning Disk IMages, Files, and Directories with bulk_extractor](https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#scanning-disk-images-files-and-directories-with-bulk_extractor)
   - and more!
 - Jesse's [BitCurator Workstation Guide](https://docs.google.com/document/d/1XDNKQ_0siYnpFul33CgSCysMngEsKysuCuNxH8icAJc/edit#heading=h.yle8pj49t1ek) created for SI 667: Foundations of Digital Curation.
+- [Brunnhilde - Siegfried-based characterization tool for directories and disk images](https://github.com/tw4l/brunnhilde), for more information on Tessa Walsh's Brunnehilde tool.
