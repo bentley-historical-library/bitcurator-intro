@@ -454,7 +454,7 @@ storage device and its associated metadata.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Getting around: Answers will vary, depending on what you choose to
 look at. At minimum, you should look at the various “Applications” (menu
@@ -762,12 +762,16 @@ BitCurator Environment.</li>
 technical and preservaiton metadata about a disk image or directory of
 data.</p>
 <p>At a high level, you will be using, and creating a workflow piecing
-together: - a “map” of the disk image, which records relationships,
-integrity (checksums), names, timestamps, etc. (this is in DFXML); - a
-summary of the file types, duplicates, and other relationship
-information; - tools for assessing Personally Identifialble Information
-(PII) and sensitive content; and - summaries of sensitive content, if
-discovered.</p>
+together:</p>
+<ul>
+<li>a “map” of the disk image, which records relationships, integrity
+(checksums), names, timestamps, etc. (this is in DFXML);</li>
+<li>a summary of the file types, duplicates, and other relationship
+information;</li>
+<li>tools for assessing Personally Identifialble Information (PII) and
+sensitive content; and</li>
+<li>summaries of sensitive content, if discovered.</li>
+</ul>
 <p><em><strong>Note:</strong> If you haven’t yet created a disk image or
 otherwise have a directory of data to work with, you can download sample
 data from BitCurator’s Github site and work with that: <a href="https://github.com/bitcurator/bcc-dfa-sample-data" class="external-link">bcc-dfa-sample-data</a>.</em></p>
