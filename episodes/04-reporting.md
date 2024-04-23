@@ -53,11 +53,7 @@ BitCurator includes a variety of tools to analyze and report on disk images and 
 
 ### Map Your Image AKA How to Create DFXML (with fiwalk)
 
-Your first goal is to create a DFXML "map" of the disk image. This will include: 
-
-- all filesystem data; 
-- checksums for integrity; and 
-- explain the relationships of elements of the disk image. 
+Your first goal is to create a DFXML "map" of the disk image. This will include all filesystem data, checksums for integrity, and explain the relationships of elements of the disk image. 
 
 **Tool:** fiwalk
 
@@ -71,6 +67,23 @@ fiwalk -f -X <output filename> <input image file>
 
 This command tells the terminal to run `fiwalk`, run the "file" command on each file that it finds (`-f`), write the results to an XML file with the specified filename (`-X <output filename>`) and identifies the source of the analysis (the EWF image).
 
+### File Summaries and Reports AKA How to Run brunnhilde to Report on the Disk Image
+
+Your next goal is to create a summary of file types, duplicates, and any hard to identify files. 
+
+**Tool:** brunnhilde
+
+**To run:** Use brunnhilde in the terminal.
+
+**Command syntax:**
+
+```
+brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf <image input file> <output destination> 
+```
+
+This command tells the terminal to run `brunnhilde`, treat the input as a disk image (`-d`), generate a bulk extractor report (`-b`), analyze the disk image as an FAT filesystem (`--tsk_fstype fat`), and analyze the disk image as an expert witness file (`--tsk_imgtype ewf`). Then, the command provides the location of the source disk image (`<image input file>`) and the destination for reports (`<output destination>`).
+
+### Identify Sensitive Information AKA How to Identify Features (with bulk_extractor)
 
 ## So What?
 
