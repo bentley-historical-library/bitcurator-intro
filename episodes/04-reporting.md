@@ -49,7 +49,9 @@ c4l24_bicuratorintro_group0X_image0XX/              <-- parent directory (sample
 
 First Things First
 
-A simply way to get usage instructions for any of the following tools is to simply type their names in the terminal and press enter. E.g., `fiwalk`, which is the same as as using `fiwalk -h` or `fiwalk --help`.
+A simply way to get usage instructions for any of the following tools is to simply type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`.
+
+![Brunnhilde Usage](https://raw.githubusercontent.com/wiki/BitCurator/bitcurator-distro/images/quickstart/image26.png)
 
 ## Reporting
 
@@ -125,11 +127,10 @@ This command tells the terminal to run the `identify_filenames.py` script, look 
 
 ## So What?
 
-What is the utility in creating all these reports? 
+What is the utility in creating all these reports? Reports create technical and preservaton metadata about directories or disk images that can accompany them in to the future and aid in later appraisal and processing for preservation and access. 
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
-
-Reports technical and preservaton metadata about directories or disk images that can accompany them in to the future and aid in later appraisal and processing for preservation and access. Otherwise:
 
 - Some reports may be needed for contextualizing and using the disc images in other programs (dfxml).
 - Some reports may be more for risk management and analyzing PII.
