@@ -377,6 +377,30 @@ provides the location of the source disk image
 <div class="section level3">
 <h3 id="identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor">Identify Sensitive Information AKA How to Identify Features (with
 bulk_extractor)<a class="anchor" aria-label="anchor" href="#identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor"></a></h3>
+<p>Your next goal is to create reports that identify potentially
+sensitive information, like SSNs, emails, etc.</p>
+<p><strong>Tool:</strong> bulk_extractor</p>
+<p><strong>To run:</strong> Use bulk_extractor in the terminal AND/OR
+use Bulk Reviewer.</p>
+<p><strong>Command syntax:</strong></p>
+<pre><code>bulk_extractor -o &lt;output destination&gt; &lt;input target disk image file&gt;  </code></pre>
+<p>This command tells the terminal to run the
+<code>bulk_extractor</code> tool, then to output a report to the
+specified directory (<code>-o reports/beout</code>) and specifies the
+target file to analyze
+(<code>&lt;input target disk image file&gt;</code>).</p>
+<p><em><strong>Note:</strong> To use Bulk Reviewer, click over
+Applications (top left) &gt; Forensics and Reporting &gt; bulk-reviewer.
+Click “Scan new directory or disk image.” Select the “Type” (“Directory”
+or “Image”), create a “Name” for the report, “Browse” to the directory
+or disk image, select and “Options” and then click “Start Scan.” Once
+it’s finished, you can then view the report and have options to save or
+export the results.</em></p>
+<p><em><strong>Note:</strong> The “terry-work-usb-2009-12-11.EO1” disk
+image in the sample data from BitCurator’s Github site produces a number
+of “hits”–including social security numbers, phone numbers, and email
+addresses–if the directories or disk images you’re working with do
+not.</em></p>
 </div>
 </section><section id="so-what"><h2 class="section-heading">So What?<a class="anchor" aria-label="anchor" href="#so-what"></a>
 </h2>
