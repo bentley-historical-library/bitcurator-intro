@@ -48,7 +48,7 @@ c4l24_bicuratorintro_group0X_image0XX/              <-- parent directory (sample
 └── c4l24_bicuratorintro_group0X_image0XX.info      <-- disk image metadata (from Guymager)	
 ```
 
-First Things First
+## First Things First
 
 A simply way to get usage instructions for any of the following tools is to simply type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`.
 
