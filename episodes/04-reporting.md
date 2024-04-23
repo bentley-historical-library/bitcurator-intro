@@ -125,13 +125,17 @@ This command tells the terminal to run the `identify_filenames.py` script, look 
 
 ## So What?
 
-include info from planning doc
-Are we explaining the “so what?” and what you may use reports for, how useful are they, etc?
-Characterizing it more as creation of technical/preservation metadata
-Some reports may be needed for contextualizing and using the disc images in other programs (dfxml)
-Some reports may be more for risk management and analyzing PII
-Some may be more for preservation planning (file types)
-Some may be for general description (dates of creation, titles/names of files, users, or other topical information)
-	
+What is the utility in creating all these reports? 
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+Reports technical and preservaton metadata about directories or disk images that can accompany them in to the future and aid in later appraisal and processing for preservation and access. Otherwise:
+
+- Some reports may be needed for contextualizing and using the disc images in other programs (dfxml).
+- Some reports may be more for risk management and analyzing PII.
+- Some may be more for preservation planning (file types).
+- Some may be for general description (dates of creation, titles/names of files, users, or other topical information).
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Additional resources
