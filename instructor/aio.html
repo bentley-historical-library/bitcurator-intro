@@ -459,7 +459,7 @@ storage device and its associated metadata.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Getting around: Answers will vary, depending on what you choose to
 look at. At minimum, you should look at the various “Applications” (menu
@@ -838,6 +838,8 @@ witness file (<code>--tsk_imgtype ewf</code>). Then, the command
 provides the location of the source disk image
 (<code>&lt;image input file&gt;</code>) and the destination for reports
 (<code>&lt;output destination&gt;</code>).</p>
+<figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image27.png" alt="brunnhilde Output" class="figure mx-auto d-block"><div class="figcaption">brunnhilde Output</div>
+</figure>
 </div>
 <div class="section level3">
 <h3 id="identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor">Identify Sensitive Information AKA How to Identify Features (with
@@ -856,14 +858,16 @@ specified directory
 (<code>-o &lt;image directory&gt;/reports/beout</code>) and specifies
 the target file to analyze
 (<code>&lt;input target disk image file&gt;</code>).</p>
-<p><em><strong>Note:</strong> To use Bulk Reviewer, click over
+<figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image33.png" alt="bulk_extractor Output" class="figure mx-auto d-block"><div class="figcaption">bulk_extractor Output</div>
+</figure><p><em><strong>Note:</strong> To use Bulk Reviewer, click over
 Applications (top left) &gt; Forensics and Reporting &gt; bulk-reviewer.
 Click “Scan new directory or disk image.” Select the “Type” (“Directory”
 or “Image”), create a “Name” for the report, “Browse” to the directory
 or disk image, select and “Options” and then click “Start Scan.” Once
 it’s finished, you can then view the report and have options to save or
 export the results.</em></p>
-<p><em><strong>Note:</strong> The “terry-work-usb-2009-12-11.EO1” disk
+<figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image30.png" alt="Bulk Reviewer Interface" class="figure mx-auto d-block"><div class="figcaption">Bulk Reviewer Interface</div>
+</figure><p><em><strong>Note:</strong> The “terry-work-usb-2009-12-11.EO1” disk
 image in the sample data from BitCurator’s Github site produces a number
 of “hits”–including social security numbers, phone numbers, and email
 addresses–if the directories or disk images you’re working with do
