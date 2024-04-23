@@ -25,6 +25,7 @@ exercises: 3
 Reporting in BitCurator is essentially a method of generating technical and preservaiton metadata about a disk image or directory of data.
 
 At a high level, you will be using, and creating a workflow piecing together:
+
 - a "map" of the disk image, which records relationships, integrity (checksums), names, timestamps, etc. (this is in DFXML); 
 - a summary of the file types, duplicates, and other relationship information;
 - tools for assessing Personally Identifialble Information (PII) and sensitive content; and 
