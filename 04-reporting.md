@@ -90,6 +90,8 @@ brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf <image input file> <outpu
 
 This command tells the terminal to run `brunnhilde`, treat the input as a disk image (`-d`), generate a bulk extractor report (`-b`), analyze the disk image as an FAT filesystem (`--tsk_fstype fat`), and analyze the disk image as an expert witness file (`--tsk_imgtype ewf`). Then, the command provides the location of the source disk image (`<image input file>`) and the destination for reports (`<output destination>`).
 
+![brunnhilde Output](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image27.png)
+
 ### Identify Sensitive Information AKA How to Identify Features (with bulk_extractor)
 
 Your next goal is to create reports that identify potentially sensitive information, like SSNs, emails, etc.
@@ -106,7 +108,11 @@ bulk_extractor -o <output destination> <input target disk image file>
 
 This command tells the terminal to run the `bulk_extractor` tool, then to output a report to the specified directory (`-o <image directory>/reports/beout`) and specifies the target file to analyze (`<input target disk image file>`).
 
+![bulk_extractor Output](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image33.png)
+
 _**Note:** To use Bulk Reviewer, click over Applications (top left) > Forensics and Reporting > bulk-reviewer. Click "Scan new directory or disk image." Select the "Type" ("Directory" or "Image"), create a "Name" for the report, "Browse" to the directory or disk image, select and "Options" and then click "Start Scan." Once it's finished, you can then view the report and have options to save or export the results._
+
+![Bulk Reviewer Interface](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image30.png)
 
 _**Note:** The "terry-work-usb-2009-12-11.EO1" disk image in the sample data from BitCurator's Github site produces a number of "hits"--including social security numbers, phone numbers, and email addresses--if the directories or disk images you're working with do not._
 
