@@ -139,3 +139,10 @@ Reports technical and preservaton metadata about directories or disk images that
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Additional resources
+
+- [BitCurator Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide), which includes sections on:
+  - [Analyzing a Disk IMage with Brunnhilde](https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#analyzing-a-disk-image-with-brunnhilde)
+  - [Scanning Disk Images and Directories with Bulk Reviewer](https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#scanning-disk-images-and-directories-with-bulk-reviewer)
+  - [Scanning Disk IMages, Files, and Directories with bulk_extractor](https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#scanning-disk-images-files-and-directories-with-bulk_extractor)
+  - and more!
+- Jesse's [BitCurator Workstation Guide](https://docs.google.com/document/d/1XDNKQ_0siYnpFul33CgSCysMngEsKysuCuNxH8icAJc/edit#heading=h.yle8pj49t1ek) created for SI 667: Foundations of Digital Curation.
