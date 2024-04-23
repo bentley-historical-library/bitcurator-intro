@@ -454,7 +454,7 @@ storage device and its associated metadata.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Getting around: Answers will vary, depending on what you choose to
 look at. At minimum, you should look at the various “Applications” (menu
@@ -713,7 +713,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-reporting"><p>Content from <a href="04-reporting.html">Reporting</a></p>
 <hr>
-<p>Last updated on 2024-04-22 |
+<p>Last updated on 2024-04-23 |
         
         <a href="https://github.com/bentley-historical-library/bitcurator-intro/edit/main/episodes/04-reporting.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -791,12 +791,8 @@ images and the filesystems they contain.</p>
 <h3 id="map-your-image-aka-how-to-create-dfxml-with-fiwalk">Map Your Image AKA How to Create DFXML (with fiwalk)<a class="anchor" aria-label="anchor" href="#map-your-image-aka-how-to-create-dfxml-with-fiwalk"></a>
 </h3>
 <p>Your first goal is to create a DFXML “map” of the disk image. This
-will include:</p>
-<ul>
-<li>all filesystem data;</li>
-<li>checksums for integrity; and</li>
-<li>explain the relationships of elements of the disk image.</li>
-</ul>
+will include all filesystem data, checksums for integrity, and explain
+the relationships of elements of the disk image.</p>
 <p><strong>Tool:</strong> fiwalk</p>
 <p><strong>To run:</strong> Use fiwalk in the terminal.</p>
 <p><strong>Command syntax:</strong></p>
@@ -806,6 +802,30 @@ will include:</p>
 results to an XML file with the specified filename
 (<code>-X &lt;output filename&gt;</code>) and identifies the source of
 the analysis (the EWF image).</p>
+</div>
+<div class="section level3">
+<h3 id="file-summaries-and-reports-aka-how-to-run-brunnhilde-to-report-on-the-disk-image">File Summaries and Reports AKA How to Run brunnhilde to Report on
+the Disk Image<a class="anchor" aria-label="anchor" href="#file-summaries-and-reports-aka-how-to-run-brunnhilde-to-report-on-the-disk-image"></a>
+</h3>
+<p>Your next goal is to create a summary of file types, duplicates, and
+any hard to identify files.</p>
+<p><strong>Tool:</strong> brunnhilde</p>
+<p><strong>To run:</strong> Use brunnhilde in the terminal.</p>
+<p><strong>Command syntax:</strong></p>
+<pre><code>brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf &lt;image input file&gt; &lt;output destination&gt; </code></pre>
+<p>This command tells the terminal to run <code>brunnhilde</code>, treat
+the input as a disk image (<code>-d</code>), generate a bulk extractor
+report (<code>-b</code>), analyze the disk image as an FAT filesystem
+(<code>--tsk_fstype fat</code>), and analyze the disk image as an expert
+witness file (<code>--tsk_imgtype ewf</code>). Then, the command
+provides the location of the source disk image
+(<code>&lt;image input file&gt;</code>) and the destination for reports
+(<code>&lt;output destination&gt;</code>).</p>
+</div>
+<div class="section level3">
+<h3 id="identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor">Identify Sensitive Information AKA How to Identify Features (with
+bulk_extractor)<a class="anchor" aria-label="anchor" href="#identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor"></a>
+</h3>
 </div>
 </section><section id="so-what"><h2 class="section-heading">So What?<a class="anchor" aria-label="anchor" href="#so-what"></a>
 </h2>
