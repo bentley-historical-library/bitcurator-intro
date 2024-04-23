@@ -85,6 +85,24 @@ This command tells the terminal to run `brunnhilde`, treat the input as a disk i
 
 ### Identify Sensitive Information AKA How to Identify Features (with bulk_extractor)
 
+Your next goal is to create reports that identify potentially sensitive information, like SSNs, emails, etc.
+
+**Tool:** bulk_extractor
+
+**To run:** Use bulk_extractor in the terminal AND/OR use Bulk Reviewer.
+
+**Command syntax:**
+
+```
+bulk_extractor -o <output destination> <input target disk image file>  
+```
+
+This command tells the terminal to run the `bulk_extractor` tool, then to output a report to the specified directory (`-o reports/beout`) and specifies the target file to analyze (`<input target disk image file>`).
+
+_**Note:** To use Bulk Reviewer, click over Applications (top left) > Forensics and Reporting > bulk-reviewer. Click "Scan new directory or disk image." Select the "Type" ("Directory" or "Image"), create a "Name" for the report, "Browse" to the directory or disk image, select and "Options" and then click "Start Scan." Once it's finished, you can then view the report and have options to save or export the results._
+
+_**Note:** The "terry-work-usb-2009-12-11.EO1" disk image in the sample data from BitCurator's Github site produces a number of "hits"--including social security numbers, phone numbers, and email addresses--if the directories or disk images you're working with do not._
+
 ## So What?
 
 include info from planning doc
