@@ -1,54 +1,14 @@
 ---
-title: Setup
+title: Overview
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Digital Forensics for Libraries and Archives: Introduction to Using BitCurator
 
-## Data Sets
-
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
-
-## Software Setup
-
-::::::::::::::::::::::::::::::::::::::: discussion
-
-### Details
-
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
-### Windows
-
-Use PuTTY
-
-::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
-### MacOS
-
-Use Terminal.app
-
-::::::::::::::::::::::::
+**May 16th**
+**9am-12pm EST**
 
 
-:::::::::::::::: spoiler
+BitCurator (BC) is a digital curation environment geared toward librarians and archivists that combines a set of digital forensics tools in the Linux-based Ubuntu operating system. The BC environment includes a suite of open source digital forensics and data analysis tools to help collecting institutions process born-digital materials. It can be run as a main operating system on a single workstation, or it can be run in a virtualized environment (that is, the entire system is running by itself inside another program on your computer).
 
-### Linux
-
-Use Terminal
-
-::::::::::::::::::::::::
-
+Assuming no prior knowledge, this workshop will first provide an overview of the environment. We will then focus on an exercise to create disk images of and transfer data from legacy media, including Zip disks and 3.5” floppy disks before walking through some of the tools available on the BC environment for analyzing them, including capture of basic system characteristics and metadata, as well as scanning for potentially sensitive information. Through a combination of hands-on work and demos, participants will gain experience with tools such as Brunnhilde (a reporting tool for directories and disk images), bulk_extractor (scan for credit card numbers, emails, etc.), and fiwalk (print filesystem statistics). The workshop will then turn to a discussion of how to build workflows that fit your institution’s needs, open discussion of digital preservation practices, and continued work on your own using sample removable media.
+	
