@@ -19,7 +19,7 @@ exercises: 2
 - Learn to evaluate when to image a disk based on individualized criteria. 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## What is a Disk Image?
+## What is a disk image?
 
 A **disk image** a bit-perfect sequence of all the bits on a particular physical device; in other words, a complete bitstream (as defined by the physical limits of a storage device).
 
@@ -108,7 +108,7 @@ You will see the main dialog state change to **Running**. When the acquisition f
 - Doesn’t contain control headers or error correction fields (raw can include these)
 - Filesystem usually will be either ISO 9660 (CD-ROM) or UDF (DVDs)
 
-## Accessing Disk Images
+## Accessing disk images
 
 - Virtualization and emulation
 - Mounting the original filesystem
@@ -129,11 +129,9 @@ Note: This mount is read-only. You cannot alter the content of a filesystem moun
 
 Once you have finished examining the content, click the eject indicator next to the filesystem name in the file dialog. You will get a prompt for your user password in order to complete this step.
 
-  
-####Do it Yourself!
 
 
-::::::::::::::::::::::::::::::::::::: Activity 
+::::::::::::::::::::::::::::::::::::: activity 
 
 Split into two groups.
 
