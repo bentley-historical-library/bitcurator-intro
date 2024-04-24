@@ -56,7 +56,7 @@ Mounting the device is not required to create an image of it. If you wish to mou
 Click on the **Applications** menu in the top left of the screen, then navigate to the Imaging and Recovery submenu. Then click on Guymager. Guymager requires elevated privileges for access to physical devices; you will be prompted for your password to enable this. Once Guymager has loaded, the main interface appears as in the picture above. In this example, the 3.25 inch floppy disk drive is selected.
 
 
-![Screenshot of the 3.25 inch floppy drive selected in the Guymager interface](fig/guymager-001.png){alt='Screenshot of the Bitcurator environment with a grey Guymager Interface'}
+![Screenshot of the 3.25 inch floppy drive selected in the Guymager interface](fig/guymager-001.png)
 
 Next, right-click on the selected device (in this example, a 3.25 USB floppy drive listed as MITSUMI_USB_FDD) and select **Acquire Image** from the context menu.
 
@@ -66,7 +66,7 @@ A new dialog prompt will appear. This disk image will be acquired using the Expe
 
 The five metadata fields starting with **Batch number** are optional, but can be useful for tracking and metadata purposes. Under **Destination** select the image directory you would like the disk image to be saved to. In this case, we have simply chosen to write the image to a folder on the Desktop. Finally, provide a name for the image. Then click **Start**.
 
-![Screenshot of the **Acquire Image** dialog box with completed metadata](fig/guymager-003.png){alt='Acquire Image dialog box'}
+![Screenshot of the **Acquire Image** dialog box with completed metadata](fig/guymager-003.png)
 
 You will see the main dialog state change to **Running**. When the acquisition finishes, you will see a **Finished - Verified & Ok** message in the State column.
 
@@ -123,7 +123,7 @@ You will see the main dialog state change to **Running**. When the acquisition f
 
 In the file manager dialog, right click on any of the sample images you have created, select **Scripts**, and then select **Disk Image Mount**. This script serves as a wrapper for libewf and some mounting tools to attempt to automatically mount any identified file systems. If such a filesystem is found, you will see it appear as a mountable device in the list on the left.
 
-![Screenshot of selecting **Disk Image Mount** from the file manager](fig/guymager-004.png){alt='Grey file manager dialog box'}
+![Screenshot of selecting **Disk Image Mount** from the file manager](fig/guymager-004.png)
 
 Note: This mount is read-only. You cannot alter the content of a filesystem mounted from an E01 file (modifying, adding new files, or deleting) from this desktop interface.
 
