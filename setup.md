@@ -14,6 +14,10 @@ Assuming no prior knowledge, this workshop will first provide an overview of the
 
 ## Instructors
 
+- Jesse Johnston -- jajohnst _at_ umich _dot_ edu
+- Elena Colón-Marrero -- emcolonm _at_ umich _dot_ edu
+- Max Eckard -- eckardm _at_ umich _dot_ edu
+
 ## Location
 
 Bentley Historical Library

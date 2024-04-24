@@ -11,6 +11,6 @@
 "episodes/04-reporting.md" "ba35b9514f02cce44fa0af65e67546a0" "site/built/04-reporting.md" "2024-04-24"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2024-03-12"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2024-03-12"
-"learners/setup.md" "b2bcc3206540c118d03e55cee927e388" "site/built/setup.md" "2024-04-24"
+"learners/setup.md" "4a3c710f1dcb4092967ceda2483d7667" "site/built/setup.md" "2024-04-24"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2024-03-12"
 "renv/profiles/lesson-requirements/renv.lock" "86a2208421af1d8cb1575c75f026b44c" "site/built/renv.lock" "2024-03-12"
