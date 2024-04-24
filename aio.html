@@ -454,7 +454,7 @@ storage device and its associated metadata.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Getting around: Answers will vary, depending on what you choose to
 look at. At minimum, you should look at the various “Applications” (menu
@@ -580,8 +580,8 @@ steps may differ.</p>
 <div class="section level3">
 <h3 id="using-guymager">Using Guymager<a class="anchor" aria-label="anchor" href="#using-guymager"></a>
 </h3>
-<p><em>The following instructions are modified from the [Bitcurator
-Quick Start Guide]</em> (<a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image" class="external-link uri">https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image</a>)</p>
+<p><em>The following instructions are modified from the</em> <a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image" class="external-link">Bitcurator
+Quick Start Guide</a></p>
 <p>Mounting the device is not required to create an image of it. If you
 wish to mount the device, click on the Files icon in the dock, and
 select the name of the indicated volume on the device to mount. If you
@@ -593,15 +593,13 @@ click on Guymager. Guymager requires elevated privileges for access to
 physical devices; you will be prompted for your password to enable this.
 Once Guymager has loaded, the main interface appears as in the picture
 above. In this example, the 3.25 inch floppy disk drive is selected.</p>
-<p>![Screenshot of the 3.25 inch floppy drive selected in the Guymager
-interface] (fig/guymager-001.png){alt=Screenshot of the Bitcurator
-environment with a grey Guymager Interface}</p>
+<p><img src="fig/guymager-001.png" alt="Screenshot of the 3.25 inch floppy drive selected in the Guymager interface" class="figure">{alt=Screenshot
+of the Bitcurator environment with a grey Guymager Interface}</p>
 <p>Next, right-click on the selected device (in this example, a 3.25 USB
 floppy drive listed as MITSUMI_USB_FDD) and select <strong>Acquire
 Image</strong> from the context menu.</p>
-<p>![Screenshot of the <strong>Acquire Image</strong> action
-highlighted] (fig/guymager-002.png){alt:Screenshot of the Bitcurator
-environment with a grey Guymager Interface}</p>
+<p><img src="fig/guymager-002.png" alt="Screenshot of the Acquire Image action highlighted" class="figure">{alt:Screenshot
+of the Bitcurator environment with a grey Guymager Interface}</p>
 <p>A new dialog prompt will appear. This disk image will be acquired
 using the Expert Witness Format (the second option at the top). Guymager
 will split EWF images into 2048MiB segments by default. If you do not
@@ -613,9 +611,8 @@ Under <strong>Destination</strong> select the image directory you would
 like the disk image to be saved to. In this case, we have simply chosen
 to write the image to a folder on the Desktop. Finally, provide a name
 for the image. Then click <strong>Start</strong>.</p>
-<p>![Screenshot of the <strong>Acquire Image</strong> dialog box with
-completed metadata] (fig/guymager-003.png) {alt=Acquire Image dialog
-box}</p>
+<p><img src="fig/guymager-003.png" alt="Screenshot of the Acquire Image dialog box with completed metadata" class="figure">
+{alt=Acquire Image dialog box}</p>
 <p>You will see the main dialog state change to
 <strong>Running</strong>. When the acquisition finishes, you will see a
 <strong>Finished - Verified &amp; Ok</strong> message in the State
@@ -676,8 +673,8 @@ in 4 billion chance of collision)</li>
 reverse engineered in libewf</li>
 <li>Previously limited to 2GB size</li>
 <li>Largely proprietary</li>
-<li>Has been reverse engineered by Joachim Metz in libewf (used in open
-source tools that read EWF) - (<a href="http://sourceforge.net/projects/libewf/files/" class="external-link uri">http://sourceforge.net/projects/libewf/files/</a>)</li>
+<li>Has been reverse engineered by Joachim Metz in <a href="http://sourceforge.net/projects/libewf/files/" class="external-link">libewf</a> (used in
+open source tools that read EWF) -</li>
 </ul>
 </div>
 <div class="section level5">
@@ -718,17 +715,16 @@ environment)</li>
 <div class="section level3">
 <h3 id="mount-disk-image-using-bitcurator-mounter">Mount disk image: Using BitCurator Mounter<a class="anchor" aria-label="anchor" href="#mount-disk-image-using-bitcurator-mounter"></a>
 </h3>
-<p><em>The following instructions are modified from the [Bitcurator
-Quick Start Guide]</em> (<a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image" class="external-link uri">https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image</a>)</p>
+<p><em>The following instructions are modified from the</em> <a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#mounting-and-examining-a-disk-image" class="external-link">Bitcurator
+Quick Start Guide</a></p>
 <p>In the file manager dialog, right click on any of the sample images
 you have created, select <strong>Scripts</strong>, and then select
 <strong>Disk Image Mount</strong>. This script serves as a wrapper for
 libewf and some mounting tools to attempt to automatically mount any
 identified file systems. If such a filesystem is found, you will see it
 appear as a mountable device in the list on the left.</p>
-<p>![Screenshot of selecting <strong>Disk Image Mount</strong> from the
-file manager] (fig/guymager-004.png) {alt=Grey file manager dialog
-box}</p>
+<p><img src="fig/guymager-004.png" alt="Screenshot of selecting Disk Image Mount from the file manager" class="figure">
+{alt=Grey file manager dialog box}</p>
 <p>Note: This mount is read-only. You cannot alter the content of a
 filesystem mounted from an E01 file (modifying, adding new files, or
 deleting) from this desktop interface.</p>
@@ -740,9 +736,9 @@ prompt for your user password in order to complete this step.</p>
 <p>Split into two groups.</p>
 <p>Group 1: Create your own disk images from the supplied 3.25 inch
 floppy disks.</p>
-<p>Group 2: Mount one of the sample disk images available in the [GitHub
-repo] (<a href="https://github.com/BitCurator/bcc-dfa-sample-data" class="external-link uri">https://github.com/BitCurator/bcc-dfa-sample-data</a>). What
-information do you see? Is there anything that sticks out to you?</p>
+<p>Group 2: Mount one of the sample disk images available in the <a href="https://github.com/BitCurator/bcc-dfa-sample-data" class="external-link">GitHub
+repo</a>. What information do you see? Is there anything that sticks out
+to you?</p>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
