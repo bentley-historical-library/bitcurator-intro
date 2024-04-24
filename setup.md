@@ -43,22 +43,24 @@ The library is located on the University of Michigan’s North Campus. Free park
 [See all U-M bus route information](https://ltp.umich.edu/campus-transit/routes-and-schedules/)
 
 **U-M Buses**
-Bursley-Baits
-Commuter North
-Commuter South
-Diag-to-Diag Express
-North-East Shuttle
-Northwood
-Northwood Express
+
+- Bursley-Baits
+- Commuter North
+- Commuter South
+- Diag-to-Diag Express
+- North-East Shuttle
+- Northwood
+- Northwood Express
 
 #### Ann Arbor Area Transportation Authority (TheRide) Bus Routes and Schedules
 
 [See all TheRide route information](https://www.theride.org/maps-schedules)
 
 **TheRide Routes nearby**
-Route #3: Huron River
-Route #22: Pontiac-Dhu Varren
-Route #66: Carpenter-Huron Parkway (Green Road Park & Ride is a stop on this route)
+
+- Route #3: Huron River
+- Route #22: Pontiac-Dhu Varren
+- Route #66: Carpenter-Huron Parkway (Green Road Park & Ride is a stop on this route)
 
 ### Access to Services
 
