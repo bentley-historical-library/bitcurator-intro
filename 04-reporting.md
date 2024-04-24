@@ -144,6 +144,8 @@ What is the utility in creating all these reports? Reports create technical and 
 - Some may be more for preservation planning (file types).
 - Some may be for general description (dates of creation, titles/names of files, users, or other topical information).
 
+The way you'd interpret any of these reports depends on the report on what you're wanted to get out of it. Some reports, like the bulk_extractor reports, are easier to read through. The DFXML, while "harder" to read, gives you all the checksums and a listing of what's on a disk image, which could be good for checking fixity, but also helping you to determine if you want to extract the files from the disk image. 
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Additional resources
