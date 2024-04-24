@@ -130,8 +130,8 @@ Note: This mount is read-only. You cannot alter the content of a filesystem moun
 Once you have finished examining the content, click the eject indicator next to the filesystem name in the file dialog. You will get a prompt for your user password in order to complete this step.
 
 
-
-::::::::::::::::::::::::::::::::::::: activity 
+## Activities
+::::::::::::::::::::::::::::::::::::: challenge
 
 Split into two groups.
 
