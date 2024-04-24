@@ -36,3 +36,7 @@ USB drive prior to installation (ignore instructions about that).
 * Be sure to **set up a Shared Folder** as outlined in the instructions, so that you can save files to your local computer (outside the VM). 
 * If you are ever asked while using BitCurator to enter an **administrator password**, 
 use **bcadmin**.
+
+## Sample Data
+
+- Sample disk images from Bentley floppy disks are available in this folder: [Bentley_Code4Lib_Samples](https://drive.google.com/drive/folders/1UQKnuwDyv8rEe2-5aFAEKkvFgYHBW7Lo?usp=drive_link).
