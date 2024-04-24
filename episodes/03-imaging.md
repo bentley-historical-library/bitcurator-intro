@@ -60,7 +60,7 @@ Click on the **Applications** menu in the top left of the screen, then navigate 
 
 Next, right-click on the selected device (in this example, a 3.25 USB floppy drive listed as MITSUMI_USB_FDD) and select **Acquire Image** from the context menu.
 
-![Screenshot of the **Acquire Image** action highlighted](fig/guymager-002.png){alt:'Screenshot of the Bitcurator environment with a grey Guymager Interface'}
+![Screenshot of the **Acquire Image** action highlighted](fig/guymager-002.png)
 
 A new dialog prompt will appear. This disk image will be acquired using the Expert Witness Format (the second option at the top). Guymager will split EWF images into 2048MiB segments by default. If you do not wish to split the image, set the **Split size** to something very large (2 EiB, for example).
 
