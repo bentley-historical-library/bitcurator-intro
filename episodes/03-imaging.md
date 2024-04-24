@@ -108,7 +108,7 @@ You will see the main dialog state change to **Running**. When the acquisition f
 - Doesn’t contain control headers or error correction fields (raw can include these)
 - Filesystem usually will be either ISO 9660 (CD-ROM) or UDF (DVDs)
 
-### Accessing Disk Images
+## Accessing Disk Images
 
 - Virtualization and emulation
 - Mounting the original filesystem
