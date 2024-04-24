@@ -1,7 +1,7 @@
 ---
 title: 'Setup'
 teaching: 5
-exercises: 3
+exercises: 15
 ---
 
 Here's how to setup BitCurator
