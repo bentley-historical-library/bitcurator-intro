@@ -24,7 +24,9 @@ Become familiar with BitCurator and its toolset
 
 ## Digital Forensics
 
-
+Digital forensics refers to a suite of activities and tools to preserve
+the original context of digital materials (e.g., the system timestamps and OS structure)
+and extract content at the bitstream level from damaged or deleted digital content.
 
 ## Archivists + Digital Forensics: Why
 
@@ -39,6 +41,12 @@ What potential uses for these tools are you considering in your context?
 ::::::::
 
 ## Enter BitCurator Environment (BCE)
+
+To address this, a group of archivists and researchers developed the BitCurator Environment, or BCE.
+The BCE is a suite of open-source digital forensics softwares that are particularly useful to archivists in tracking creation metadata, structure, file identification, and documenting provenance. It even contains some built-in writeblockers and other tools to preserve original order and chain of custody.
+BitCurator tools are grouped within an Ubuntu-based Linux environment and can be run virtually
+or installed directly as the main OS of a workstation, and together this is all known as the BCE.
+We will discuss BCE more in the next episode.
 
 ## Resources
 
