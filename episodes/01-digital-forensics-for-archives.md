@@ -22,7 +22,7 @@ Become familiar with BitCurator and its toolset
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Archivists + Digital Forensics: Why 
+## Archivists + Digital Forensics: Why
 
 What are some use cases for digital forensics with legacy born digital materials?
 
