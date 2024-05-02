@@ -22,7 +22,11 @@ Become familiar with BitCurator and its toolset
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Archivists + Digital Forensics: Why 
+## Digital Forensics
+
+
+
+## Archivists + Digital Forensics: Why
 
 What are some use cases for digital forensics with legacy born digital materials?
 
@@ -49,3 +53,11 @@ environment, but the list also includes a few more general resources:
 - Julianna Barrera-Gomez and Ricky Erway, “Walk This Way: Detailed Steps for Transferring Born-Digital Content from Media You Can Read In-house,” 2013, OCLC Research. Available at [https://www.oclc.org/content/dam/research/publications/library/2013/2013-02.pdf](https://www.oclc.org/content/dam/research/publications/library/2013/2013-02.pdf)
 - Christopher A. Lee, et al., “From Bitstreams to Heritage: Putting Digital Forensics into Practice in Collecting Institutions,” whitepaper for BitCurator, September 2013. Available at [https://bitcurator.net/wp-content/uploads/sites/1099/2018/08/bitstreams-to-heritage.pdf](https://bitcurator.net/wp-content/uploads/sites/1099/2018/08/bitstreams-to-heritage.pdf)
 - Sam Meister and Alexandra Chassanoff, “Integrating Digital Forensics Techniques into CuratorialTasks: A Case Study,” International Journal of Digital Curation 9 (2014): 6-16. DOI: [10.2218/ijdc.v9i2.325](https://dx.doi.org/10.2218/ijdc.v9i2.325)
+
+:::::::: keypoints
+
+- Digital forensics identifies a range of activities which aim to extract and preserve contextual information about digital content on external devices, like laptops, servers, drives, and even legacy devices like floppy disks and USB drives
+- Digital forensics tools and techniques can help digital preservation work, particularly in maintaining information about original order, provenance, and chain of custody for digital objects
+- Digital preservation workers, particularly archivists, have used digital forensics techniques and tools to record information about, process, and preserve digital content, and particularly to address content stored on legacy digital devices
+
+::::::::
