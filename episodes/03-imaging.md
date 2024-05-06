@@ -131,7 +131,8 @@ Once you have finished examining the content, click the eject indicator next to 
 
 
 ## Activities
-::::::::::::::::::::::::::::::::::::: challenge
+
+::::::::::::::::::::::::::::::::::::: challenge 
 
 Split into two groups.
 
@@ -139,7 +140,14 @@ Group 1: Create your own disk images from the supplied 3.25 inch floppy disks.
 
 Group 2: Mount one of the sample disk images available in the [GitHub repo](https://github.com/BitCurator/bcc-dfa-sample-data). What information do you see? Is there anything that sticks out to you? 
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::: solution
+
+## Solution
+ 
+Once you've completed one group activity then switch to the next group!
+
+:::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::::::::::::::  
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
