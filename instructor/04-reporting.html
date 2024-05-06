@@ -267,7 +267,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reporting</h1>
-        <p>Last updated on 2024-04-24 |
+        <p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/bentley-historical-library/bitcurator-intro/edit/main/episodes/04-reporting.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -288,8 +288,8 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What tools are available in the BitCurator environment for analyzing
-disk images or directories of data tranferred from legacy media?</li>
+<ul><li>What tools are available in the BCE for analyzing disk images or
+directories of data tranferred from legacy media?</li>
 <li>How can librarians and archivists capture basic system
 characteristics and metadata?</li>
 <li>How can they scan for for potentially sensitive information?</li>
@@ -327,8 +327,9 @@ information;</li>
 sensitive content; and</li>
 <li>summaries of sensitive content, if discovered.</li>
 </ul><p><em><strong>Note:</strong> If you haven’t yet created a disk image or
-otherwise have a directory of data to work with, you can download sample
-data from BitCurator’s Github site and work with that: <a href="https://github.com/bitcurator/bcc-dfa-sample-data" class="external-link">bcc-dfa-sample-data</a>.</em></p>
+otherwise have a directory of data to work with, you can use <a href="https://drive.google.com/drive/folders/1UQKnuwDyv8rEe2-5aFAEKkvFgYHBW7Lo?usp=drive_link" class="external-link">Bentley
+Code4Lib Samples</a> or download sample data from BitCurator’s Github
+site and work with that: <a href="https://github.com/bitcurator/bcc-dfa-sample-data" class="external-link">bcc-dfa-sample-data</a>.</em></p>
 <p>One possible structure to group content and metadata:</p>
 <pre><code>c4l24_bicuratorintro_group0X_image0XX/              &lt;-- parent directory (sample name)
 │
@@ -342,10 +343,17 @@ data from BitCurator’s Github site and work with that: <a href="https://github
 └── c4l24_bicuratorintro_group0X_image0XX.info      &lt;-- disk image metadata (from Guymager)	</code></pre>
 <section id="first-things-first"><h2 class="section-heading">First Things First<a class="anchor" aria-label="anchor" href="#first-things-first"></a>
 </h2>
-<hr class="half-width"><p>A simply way to get usage instructions for any of the following tools
-is to simply type their names in the terminal and press enter. E.g.,
-<code>brunnhilde.py</code>, which is the same as as using
-<code>brunnhilde.py -h</code> or <code>brunnhilde.py --help</code>.</p>
+<hr class="half-width"><p>Today we’ll be using a number of command line tools in the BCE,
+including:</p>
+<ul><li><code>fiwalk</code></li>
+<li><code>brunnhilde.py</code></li>
+<li><code>bulk_extractor</code></li>
+<li><code>identify_filenames.py</code></li>
+</ul><p>All of these are “pre-loaded” in the BCE, and a simple way to get
+usage instructions for any of them is to simply type their names in the
+terminal and press enter. E.g., <code>brunnhilde.py</code>, which is the
+same as as using <code>brunnhilde.py -h</code> or
+<code>brunnhilde.py --help</code>.</p>
 <figure><img src="https://raw.githubusercontent.com/wiki/BitCurator/bitcurator-distro/images/quickstart/image26.png" alt="Brunnhilde Usage" class="figure mx-auto d-block"><div class="figcaption">Brunnhilde Usage</div>
 </figure></section><section id="reporting"><h2 class="section-heading">Reporting<a class="anchor" aria-label="anchor" href="#reporting"></a>
 </h2>
@@ -353,56 +361,89 @@ is to simply type their names in the terminal and press enter. E.g.,
 images and the filesystems they contain.</p>
 <div class="section level3">
 <h3 id="map-your-image-aka-how-to-create-dfxml-with-fiwalk">Map Your Image AKA How to Create DFXML (with fiwalk)<a class="anchor" aria-label="anchor" href="#map-your-image-aka-how-to-create-dfxml-with-fiwalk"></a></h3>
-<p>Your first goal is to create a DFXML “map” of the disk image. This
-will include all filesystem data, checksums for integrity, and explain
-the relationships of elements of the disk image.</p>
+<p>Your first goal is to create a Digital Forensics or DFXML “map” of
+the disk image. DFXML is used to automate digital forensics processing,
+and includes all filesystem data, checksums for integrity, and explain
+the relationships of elements of the disk image. We’ll do this using
+fiwalk, a program that processes a disk image using the SleuthKit
+library (a library and collection of command line tools that allow you
+to investigate disk images for various file systems) and outputs its
+results in Digital Forensics XML.</p>
 <p><strong>Tool:</strong> fiwalk</p>
 <p><strong>To run:</strong> Use fiwalk in the terminal.</p>
 <p><strong>Command syntax:</strong></p>
-<pre><code>fiwalk -f -X &lt;output filename&gt; &lt;input image file&gt; </code></pre>
+<pre><code>fiwalk -f -X &lt;output filename_dfxml.xml&gt; &lt;input image file.E01&gt; </code></pre>
 <p>This command tells the terminal to run <code>fiwalk</code>, run the
 “file” command on each file that it finds (<code>-f</code>), write the
 results to an XML file with the specified filename
-(<code>-X &lt;output filename&gt;</code>) and identifies the source of
-the analysis (the EWF image).</p>
+(<code>-X &lt;output filename_dfxml.xml&gt;</code>) and identifies the
+source of the analysis (the EWF image).</p>
 </div>
 <div class="section level3">
 <h3 id="file-summaries-and-reports-aka-how-to-run-brunnhilde-to-report-on-the-disk-image">File Summaries and Reports AKA How to Run brunnhilde to Report on
 the Disk Image<a class="anchor" aria-label="anchor" href="#file-summaries-and-reports-aka-how-to-run-brunnhilde-to-report-on-the-disk-image"></a></h3>
 <p>Your next goal is to create a summary of file types, duplicates, and
-any hard to identify files.</p>
+any hard to identify files using Brunnhilde. Brunnhilde runs Siegfried,
+a signature-based file format identification tool, against a specified
+directory or disk image, loads the results into a sqlite3 database, and
+queries the database to generate reports to aid in triage, arrangement,
+and description of digital archives. The program will also check for
+viruses unless specified otherwise, and will optionally run
+bulk_extractor against the given source.</p>
 <p><strong>Tool:</strong> brunnhilde</p>
 <p><strong>To run:</strong> Use brunnhilde in the terminal.</p>
 <p><strong>Command syntax:</strong></p>
-<pre><code>brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf &lt;image input file&gt; &lt;output destination&gt; </code></pre>
+<pre><code>brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf &lt;image input file.E01&gt; &lt;output destination/reports/brunn_output&gt; </code></pre>
 <p>This command tells the terminal to run <code>brunnhilde</code>, treat
 the input as a disk image (<code>-d</code>), generate a bulk extractor
 report (<code>-b</code>), analyze the disk image as an FAT filesystem
 (<code>--tsk_fstype fat</code>), and analyze the disk image as an expert
 witness file (<code>--tsk_imgtype ewf</code>). Then, the command
 provides the location of the source disk image
-(<code>&lt;image input file&gt;</code>) and the destination for reports
-(<code>&lt;output destination&gt;</code>).</p>
+(<code>&lt;image input file.E01&gt;</code>) and the destination for
+reports
+(<code>&lt;output destination/reports/brunn_output&gt;</code>).</p>
 <figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image27.png" alt="brunnhilde Output" class="figure mx-auto d-block"><div class="figcaption">brunnhilde Output</div>
-</figure></div>
+</figure><p>Outputs include:</p>
+<ul><li>report.html: Includes some provenance information on the scan
+itself, aggregate statistics for the material as a whole (number of
+files, begin and end dates, number of unique vs. duplicate files, etc.),
+and detailed reports on content found (file formats, file format
+versions, MIME types, last modified dates by year, unidentified files,
+Siegfried warnings/errors, duplicate files, and -optionally - Social
+Security Numbers found by bulk_extractor).</li>
+<li>csv_reports folder: Contains CSV results queried from database on
+file formats, file format versions, MIME types, last modified dates by
+year, unidentified files, Siegfried warnings and errors, and duplicate
+files.</li>
+<li>siegfried.csv: Full CSV output from Siegfried</li>
+</ul></div>
 <div class="section level3">
 <h3 id="identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor">Identify Sensitive Information AKA How to Identify Features (with
 bulk_extractor)<a class="anchor" aria-label="anchor" href="#identify-sensitive-information-aka-how-to-identify-features-with-bulk_extractor"></a></h3>
 <p>Your next goal is to create reports that identify potentially
-sensitive information, like SSNs, emails, etc.</p>
+sensitive information, like SSNs, emails, etc. To do this, we’ll use
+Bulk Extractor, which rapidly scans any kind of input (disk images,
+files, directories of files, etc) and extracts structured information
+such as email addresses, credit card numbers, JPEGs and JSON snippets
+without parsing the file system or file system structures.</p>
 <p><strong>Tool:</strong> bulk_extractor</p>
 <p><strong>To run:</strong> Use bulk_extractor in the terminal AND/OR
 use Bulk Reviewer.</p>
 <p><strong>Command syntax:</strong></p>
-<pre><code>bulk_extractor -o &lt;output destination&gt; &lt;input target disk image file&gt;  </code></pre>
+<pre><code>bulk_extractor -o &lt;output destination/reports/beout&gt; &lt;input target disk image file.E01&gt;  </code></pre>
 <p>This command tells the terminal to run the
 <code>bulk_extractor</code> tool, then to output a report to the
 specified directory
 (<code>-o &lt;image directory&gt;/reports/beout</code>) and specifies
 the target file to analyze
-(<code>&lt;input target disk image file&gt;</code>).</p>
+(<code>&lt;input target disk image file.E01&gt;</code>).</p>
 <figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image33.png" alt="bulk_extractor Output" class="figure mx-auto d-block"><div class="figcaption">bulk_extractor Output</div>
-</figure><p><em><strong>Note:</strong> To use Bulk Reviewer, click over
+</figure><p><em><strong>Note:</strong> To use Bulk Reviewer, an Electron desktop
+application that aids in identification, review, and removal of
+sensitive files in directories and disk images, and which scans
+directories and disk images for personally identifiable information
+(PII) and other sensitive information using bulk_extractor, click over
 Applications (top left) &gt; Forensics and Reporting &gt; bulk-reviewer.
 Click “Scan new directory or disk image.” Select the “Type” (“Directory”
 or “Image”), create a “Name” for the report, “Browse” to the directory
@@ -410,7 +451,17 @@ or disk image, select and “Options” and then click “Start Scan.” Once
 it’s finished, you can then view the report and have options to save or
 export the results.</em></p>
 <figure><img src="https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image30.png" alt="Bulk Reviewer Interface" class="figure mx-auto d-block"><div class="figcaption">Bulk Reviewer Interface</div>
-</figure><p><em><strong>Note:</strong> The “terry-work-usb-2009-12-11.EO1” disk
+</figure><p>The desktop application then enables users to:</p>
+<ul><li>Review features found by type and by file in a user-friendly
+dashboard that supports annotation and dismissing features as false
+positives</li>
+<li>Generate CSV reports of features found</li>
+<li>Export sets of files
+<ul><li>Cleared: Files free of PII</li>
+<li>Private: Files with PII that should be restricted or run through
+redaction software</li>
+</ul></li>
+</ul><p><em><strong>Note:</strong> The “terry-work-usb-2009-12-11.EO1” disk
 image in the sample data from BitCurator’s Github site produces a number
 of “hits”–including social security numbers, phone numbers, and email
 addresses–if the directories or disk images you’re working with do
@@ -421,22 +472,23 @@ not.</em></p>
 Identified Features (with identify_filenames.py)<a class="anchor" aria-label="anchor" href="#summarize-sensitive-information-reports-aka-how-to-summarize-identified-features-with-identify_filenames-py"></a></h3>
 <p>Your final goal is to summarize the reports on sensitive information,
 show main types of features, and to note what files contain the
-features.</p>
+features. To do this, we’ll use <code>identify_filenames.py</code>,
+which identifies filenames from “bulk_extractor” output.</p>
 <p><strong>Tool:</strong> identify_filenames.py</p>
 <p><strong>To run:</strong> Use identify_filenames in the terminal.</p>
 <p><strong>Command syntax:</strong></p>
-<pre><code>identify_filenames.py --all --image_filename &lt;input disk image&gt; --xmlfile &lt;DFXML of the image&gt; &lt;bulk extractor reports location&gt; &lt;destination for summary report&gt;  </code></pre>
+<pre><code>identify_filenames.py --all --image_filename &lt;input disk image.E01&gt; --xmlfile &lt;DFXML of the image_dfxml.xml&gt; &lt;bulk extractor reports location/reports/brunn_output/bulk_extractor&gt; &lt;destination for summary report&gt;/reports/mappedfeatures&gt;  </code></pre>
 <p>This command tells the terminal to run the
 <code>identify_filenames.py</code> script, look at all of the feature
 files (<code>--all</code>), specifies the source image
 (<code>--image_filename &lt;input disk image&gt;</code>), use the
 specified DFXML file
-(<code>--xmlfile &lt;DFXML of the image&gt;</code>), identifies the bulk
-extractor output to use
+(<code>--xmlfile &lt;DFXML of the image_dfxml.xml&gt;</code>),
+identifies the bulk extractor output to use
 (<code>&lt;bulk extractor reports location&gt;</code>, use the one in
-<code>&lt;image directory&gt;/reports/brunn_outputs/bulk_extractor</code>),
+<code>&lt;image directory/reports/brunn_output/bulk_extractor&gt;</code>),
 and specifies a destination for the the analysis
-(<code>&lt;image directory&gt;/reports/mappedfeatures</code>).</p>
+(<code>&lt;image directory/reports/mappedfeatures&gt;</code>).</p>
 </div>
 </section><section id="so-what"><h2 class="section-heading">So What?<a class="anchor" aria-label="anchor" href="#so-what"></a>
 </h2>
@@ -549,8 +601,8 @@ any links that you are not going to use.
   "url": "https://bentley-historical-library.github.io/bitcurator-intro/instructor/04-reporting.html",
   "identifier": "https://bentley-historical-library.github.io/bitcurator-intro/instructor/04-reporting.html",
   "dateCreated": "2024-02-20",
-  "dateModified": "2024-04-24",
-  "datePublished": "2024-05-02"
+  "dateModified": "2024-05-06",
+  "datePublished": "2024-05-06"
 }
 
   </script><script>
