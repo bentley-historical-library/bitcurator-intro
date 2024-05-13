@@ -6,23 +6,25 @@ exercises: 3
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What tools are available in the BCE for analyzing disk images or directories of data tranferred from legacy media?
-- How can librarians and archivists capture basic system characteristics and metadata?
-- How can they scan for for potentially sensitive information?
+- What tools are available in the BCE for analyzing disk images or directories of data transferred from legacy media?
+- How do you use them?
+  - Specifically, how can librarians and archivists capture basic system characteristics and metadata?
+  - How can they generate reports to help them triage and organize files for digital archiving processes?
+  - How can they scan for for potentially sensitive information to help them make decisiosn about access?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Gain experience with:
-  - Brunnhilde, a reporting tool for directories and disk images;
-  - Bulk Extractor and Bulk Reviewer, which scans for credit card numbers, emails, etc.; and
+- Gain basic experience with:
+  - **Brunnhilde**, a reporting tool for directories and disk images;
+  - **Bulk Extractor** and **Bulk Reviewer**, which scans for credit card numbers, emails, etc.; and
   - `fiwalk`, to print filesystem statistics
-- Discover ways to learn more about the reporting functionality in the BitCurator Environment.
+- Learn more about reporting functionality in the BitCurator Environment, in general, and where to learn more.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Reporting in BitCurator is essentially a method of generating technical and preservaiton metadata about a disk image or directory of data.
+Reporting in BitCurator is essentially a method of generating technical and preservation metadata about a disk image or directory of data.
 
 At a high level, you will be using, and creating a workflow piecing together:
 
@@ -33,7 +35,7 @@ At a high level, you will be using, and creating a workflow piecing together:
 
 _**Note:** If you haven't yet created a disk image or otherwise have a directory of data to work with, you can use [Bentley Code4Lib Samples](https://drive.google.com/drive/folders/1UQKnuwDyv8rEe2-5aFAEKkvFgYHBW7Lo?usp=drive_link) or download sample data from BitCurator's Github site and work with that: [bcc-dfa-sample-data](https://github.com/bitcurator/bcc-dfa-sample-data)._
 
-One possible structure to group content and metadata:
+One possible structure to group content and metadata (the one we'll be using for this workshop):
 
 ```
 c4l24_bicuratorintro_group0X_image0XX/              <-- parent directory (sample name)
@@ -57,7 +59,7 @@ Today we'll be using a number of command line tools in the BCE, including:
 - `bulk_extractor`
 - `identify_filenames.py`
 
-All of these are "pre-loaded" in the BCE, and a simple way to get usage instructions for any of them is to simply type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`.
+All of these are "pre-loaded" in the BCE, and a simple way to get usage instructions for any of them is to simply type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`. This is standard for CLI tools, but we hope it helps illustrate how what we're doing today is only the "tip of the iceberg" for any of these individual tools or the BCE in general.
 
 ![Brunnhilde Usage](https://raw.githubusercontent.com/wiki/BitCurator/bitcurator-distro/images/quickstart/image26.png)
 
@@ -67,7 +69,7 @@ BitCurator includes a variety of tools to analyze and report on disk images and 
 
 ### Map Your Image AKA How to Create DFXML (with fiwalk)
 
-Your first goal is to create a Digital Forensics or DFXML "map" of the disk image. DFXML is used to automate digital forensics processing, and includes all filesystem data, checksums for integrity, and explain the relationships of elements of the disk image. We'll do this using fiwalk, a program that processes a disk image using the SleuthKit library (a library and collection of command line tools that allow you to investigate disk images for various file systems) and outputs its results in Digital Forensics XML. 
+Your first goal is to create a Digital Forensics or DFXML "map" of the disk image. DFXML is used to automate digital forensics processing, and includes all filesystem data, checksums for integrity, and explain the relationships of elements of the disk image. We'll do this using fiwalk, a program that processes a disk image using the SleuthKit library (a library and collection of command line tools that allow you to investigate disk images for various file systems) and outputs its results in Digital Forensics XML. This map will be used later in other tools. 
 
 **Tool:** fiwalk
 
@@ -79,11 +81,11 @@ Your first goal is to create a Digital Forensics or DFXML "map" of the disk imag
 fiwalk -f -X <output filename_dfxml.xml> <input image file.E01> 
 ```
 
-This command tells the terminal to run `fiwalk`, run the "file" command on each file that it finds (`-f`), write the results to an XML file with the specified filename (`-X <output filename_dfxml.xml>`) and identifies the source of the analysis (the EWF image).
+This command tells the terminal to run `fiwalk`, run the "file" command on each file that it finds (`-f`), write the results to an XML file with the specified filename (`-X <output filename_dfxml.xml>`) and identifies the source of the analysis (the disk image).
 
-### File Summaries and Reports AKA How to Run brunnhilde to Report on the Disk Image
+### Generate File Summaries and Reports AKA How to Run brunnhilde to Report on the Disk Image
 
-Your next goal is to create a summary of file types, duplicates, and any hard to identify files using Brunnhilde. Brunnhilde runs Siegfried, a signature-based file format identification tool, against a specified directory or disk image, loads the results into a sqlite3 database, and queries the database to generate reports to aid in triage, arrangement, and description of digital archives. The program will also check for viruses unless specified otherwise, and will optionally run bulk_extractor against the given source.
+Your next goal is to create a summary of file types, duplicates, and any hard to identify files using Brunnhilde. Brunnhilde runs Siegfried, a signature-based file format identification tool, against a specified directory or disk image, loads the results into a sqlite3 database, and queries the database to generate reports to aid in assessment: triage, arrangement, and description of digital archives. The program will also check for viruses unless specified otherwise, and will optionally run bulk_extractor against the given source.
 
 **Tool:** brunnhilde
 
@@ -95,7 +97,7 @@ Your next goal is to create a summary of file types, duplicates, and any hard to
 brunnhilde.py -d -b --tsk_fstype fat --tsk_imgtype ewf <image input file.E01> <output destination/reports/brunn_output> 
 ```
 
-This command tells the terminal to run `brunnhilde`, treat the input as a disk image (`-d`), generate a bulk extractor report (`-b`), analyze the disk image as an FAT filesystem (`--tsk_fstype fat`), and analyze the disk image as an expert witness file (`--tsk_imgtype ewf`). Then, the command provides the location of the source disk image (`<image input file.E01>`) and the destination for reports (`<output destination/reports/brunn_output>`).
+This command tells the terminal to run `brunnhilde`, treat the input as a disk image (`-d`), generate a bulk extractor report (`-b`), analyze the disk image as a FAT filesystem (`--tsk_fstype fat`), and analyze the disk image as an expert witness file (`--tsk_imgtype ewf`). Then, the command provides the location of the source disk image (`<image input file.E01>`) and the destination for reports (`<output destination/reports/brunn_output>`).
 
 ![brunnhilde Output](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image27.png)
 
@@ -123,7 +125,7 @@ This command tells the terminal to run the `bulk_extractor` tool, then to output
 
 ![bulk_extractor Output](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image33.png)
 
-_**Note:** To use Bulk Reviewer, an Electron desktop application that aids in identification, review, and removal of sensitive files in directories and disk images, and which scans directories and disk images for personally identifiable information (PII) and other sensitive information using bulk_extractor, click over Applications (top left) > Forensics and Reporting > bulk-reviewer. Click "Scan new directory or disk image." Select the "Type" ("Directory" or "Image"), create a "Name" for the report, "Browse" to the directory or disk image, select and "Options" and then click "Start Scan." Once it's finished, you can then view the report and have options to save or export the results._
+_**Note:** To use Bulk Reviewer, a GUI alternative and an Electron desktop application that aids in identification, review, and removal of sensitive files in directories and disk images, and which scans directories and disk images for personally identifiable information (PII) and other sensitive information using bulk_extractor, click over Applications (top left) > Forensics and Reporting > bulk-reviewer. Click "Scan new directory or disk image." Select the "Type" ("Directory" or "Image"), create a "Name" for the report, "Browse" to the directory or disk image, select and "Options" and then click "Start Scan." Once it's finished, you can then view the report and have options to save or export the results._
 
 ![Bulk Reviewer Interface](https://github.com/BitCurator/bitcurator-distro/wiki/images/quickstart/image30.png)
 
@@ -139,7 +141,7 @@ _**Note:** The "terry-work-usb-2009-12-11.EO1" disk image in the sample data fro
 
 ### Summarize Sensitive Information Reports AKA How to Summarize Identified Features (with identify_filenames.py)
 
-Your final goal is to summarize the reports on sensitive information, show main types of features, and to note what files contain the features. To do this, we'll use `identify_filenames.py`, which identifies filenames from "bulk_extractor" output.
+Your final goal is to summarize the reports on sensitive information, show main types of features, and to note what files contain the features. To do this, we'll use `identify_filenames.py`, which identifies filenames from "bulk_extractor" output and uses the DFXML to map to point between various hits discovered earlier to the files on the disk images (rather than the byte offsets).
 
 **Tool:** identify_filenames.py
 
