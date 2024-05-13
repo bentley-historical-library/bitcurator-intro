@@ -28,11 +28,11 @@ of the above, so there is not need to install it separately)
 ## Installation Tips
 
 * To guide your BitCurator installation and imaging process, you should consult
-Bitcurator's QuickStart Guide, available here: http://distro.ibiblio.org/bitcurator/docs/BitCurator-Quickstart-v4.x.x.pdf.
+Bitcurator's QuickStart Guide, available here: https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide.
 * Note that for this activity, **you will be using the "Virtual Appliance" option, not the option to 
 install as a direct boot or partition**. So, you do not need to create a bootable 
 USB drive prior to installation (ignore instructions about that). 
-* You can use the `.ova` file linked here for your virtual appliance: https://distro.ibiblio.org/bitcurator/BitCurator-4.4.1.ova ([SHA256 for verification](https://distro.ibiblio.org/bitcurator/BitCurator-4.4.1.ova.sha256))
+* You can find the instructions for installing the BitCurator Virtual Appliance in VirtualBox here: https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#install-option-2-import-a-bitcurator-virtual-appliance-in-virtualbox 
 * Be sure to **set up a Shared Folder** as outlined in the instructions, so that you can save files to your local computer (outside the VM). 
 * If you are ever asked while using BitCurator to enter an **administrator password**, 
 use **bcadmin**.
