@@ -11,6 +11,7 @@ exercises: 3
   - Specifically, how can librarians and archivists capture basic system characteristics and metadata?
   - How can they generate reports to help them triage and organize files for digital archiving processes?
   - How can they scan for for potentially sensitive information to help them make decisiosn about access?
+- How can use of the tools assist in archival workflows?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -19,7 +20,7 @@ exercises: 3
 - Gain basic experience with:
   - **Brunnhilde**, a reporting tool for directories and disk images;
   - **Bulk Extractor** and **Bulk Reviewer**, which scans for credit card numbers, emails, etc.; and
-  - `fiwalk`, to print filesystem statistics
+  - **`fiwalk`**, to print filesystem statistics
 - Learn more about reporting functionality in the BitCurator Environment, in general, and where to learn more.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
