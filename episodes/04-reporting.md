@@ -8,9 +8,6 @@ exercises: 3
 
 - What tools are available in the BCE for analyzing disk images or directories of data transferred from legacy media?
 - How do you use them?
-  - Specifically, how can librarians and archivists capture basic system characteristics and metadata?
-  - How can they generate reports to help them triage and organize files for digital archiving processes?
-  - How can they scan for for potentially sensitive information to help them make decisiosn about access?
 - How can use of the tools assist in archival workflows?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
