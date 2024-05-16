@@ -57,7 +57,7 @@ Today we'll be using a number of command line tools in the BCE, including:
 - `bulk_extractor`
 - `identify_filenames.py`
 
-All of these are "pre-loaded" in the BCE, and a simple way to get usage instructions for any of them is to simply type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`. This is standard for CLI tools, but we hope it helps illustrate how what we're doing today is only the "tip of the iceberg" for any of these individual tools or the BCE in general.
+All of these are "pre-loaded" in the BCE, and a simple way to get usage instructions for any of them is to type their names in the terminal and press enter. E.g., `brunnhilde.py`, which is the same as as using `brunnhilde.py -h` or `brunnhilde.py --help`. This is standard for CLI tools, but we hope it helps illustrate how what we're doing today is only the "tip of the iceberg" for any of these individual tools or the BCE in general.
 
 ![Brunnhilde Usage](https://raw.githubusercontent.com/wiki/BitCurator/bitcurator-distro/images/quickstart/image26.png)
 
