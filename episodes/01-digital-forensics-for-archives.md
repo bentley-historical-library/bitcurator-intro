@@ -1,7 +1,7 @@
 ---
 title: 'Digital Forensics for Archives'
-teaching: 5
-exercises: 3
+teaching: 15
+exercises: 5
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
